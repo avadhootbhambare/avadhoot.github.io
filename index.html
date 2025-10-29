@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Avadhoot Bhambare — Product / Solutions / Customer Advocate</title>
+  <meta name="description" content="Avadhoot Bhambare — Product & Solutions leader building customer-centric fintech platforms across payments, lending, and enterprise finance." />
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0f1724;
+      --card:#0b1220;
+      --muted:#9aa4b2;
+      --accent:#6ee7b7;
+      --glass: rgba(255,255,255,0.04);
+      --glass-2: rgba(255,255,255,0.02);
+      --radius:14px;
+      --maxw:1100px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;
+      background: linear-gradient(180deg,#071021 0%, #071423 60%);
+      color:#e6eef6;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.5;
+    }
+
+    /* Container */
+    .wrap{
+      max-width:var(--maxw);
+      margin: 36px auto;
+      padding: 28px;
+    }
+
+    /* NAV */
+    nav{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:16px;
+      margin-bottom:22px;
+    }
+    .brand{
+      display:flex;
+      gap:12px;
+      align-items:center;
+      text-decoration:none;
+      color:inherit;
+    }
+    .avatar{
+      width:56px;height:56px;border-radius:12px;
+      background:linear-gradient(135deg,var(--accent),#38bdf8);
+      display:flex;align-items:center;justify-content:center;
+      font-weight:700;color:#042027;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.45);
+    }
+    .navlinks{display:flex;gap:18px;align-items:center;}
+    .navlinks a{
+      text-decoration:none;color:var(--muted);
+      font-weight:600;font-size:14px;
+    }
+    .navlinks a:hover{color:var(--accent)}
+
+    /* Hero */
+    .hero{
+      display:grid;
+      grid-template-columns: 1fr 360px;
+      gap:28px;
+      align-items:start;
+      margin-bottom:28px;
+    }
+    .card{
+      background:linear-gradient(180deg,var(--glass),var(--glass-2));
+      border:1px solid rgba(255,255,255,0.03);
+      border-radius:var(--radius);
+      padding:20px;
+      box-shadow: 0 6px 30px rgba(2,6,23,0.55);
+      backdrop-filter: blur(6px);
+    }
+
+    .intro h1{
+      margin:0 0 4px 0;
+      font-size:28px;
+      letter-spacing:-0.4px;
+    }
+    .intro p.lead{margin:6px 0 12px 0;color:var(--muted);font-size:15px}
+    .meta{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+    .chip{background:rgba(255,255,255,0.03);padding:8px 10px;border-radius:10px;font-size:13px;color:var(--muted)}
+    .cta-row{display:flex;gap:12px;margin-top:16px}
+    .btn{
+      display:inline-flex;align-items:center;gap:8px;
+      padding:10px 14px;border-radius:12px;
+      background:linear-gradient(90deg,var(--accent),#34d399);
+      color:#042027;font-weight:700;text-decoration:none;
+      box-shadow: 0 8px 30px rgba(54,211,160,0.12);
+    }
+    .btn.secondary{
+      background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted);font-weight:600;
+    }
+
+    /* sections */
+    section{margin:18px 0;padding:18px 0}
+    .section-title{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+    .section-title h2{margin:0;font-size:18px}
+    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+
+    /* Experience */
+    .exp-item{padding:12px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.02)}
+    .exp-item h3{margin:0 0 6px 0;font-size:15px}
+    .exp-item p{margin:0;color:var(--muted);font-size:14px}
+
+    /* Skills */
+    .skills{display:flex;flex-wrap:wrap;gap:10px}
+    .skill{padding:8px 10px;border-radius:999px;background:rgba(255,255,255,0.03);font-size:13px;color:var(--muted)}
+
+    /* Projects */
+    .project{
+      padding:14px;border-radius:12px;background:linear-gradient(180deg, rgba(9,12,20,0.6), rgba(9,12,20,0.55));
+      border:1px solid rgba(255,255,255,0.02)
+    }
+    .project h4{margin:0 0 6px 0}
+    .project p{margin:0;color:var(--muted);font-size:14px}
+
+    /* Slides embed responsive */
+    .slides-wrap{
+      position:relative;
+      width:100%;
+      padding-top:56.25%; /* 16:9 ratio */
+      border-radius:12px;
+      overflow:hidden;
+      border:1px solid rgba(255,255,255,0.03);
+      box-shadow: 0 10px 40px rgba(2,6,23,0.6);
+    }
+    .slides-wrap iframe{
+      position:absolute;
+      top:0;left:0;width:100%;height:100%;border:0;
+      background:transparent;
+    }
+
+    /* Contact */
+    .contact-grid{display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+    .contact-card{flex:1;min-width:220px;padding:12px;border-radius:12px;background:linear-gradient(180deg,var(--glass-2),transparent);border:1px solid rgba(255,255,255,0.02)}
+    .contact-card a{color:var(--accent);text-decoration:none;font-weight:700}
+
+    /* Footer */
+    footer{margin-top:28px;text-align:center;color:var(--muted);font-size:13px;padding:18px 0}
+
+    /* Responsive */
+    @media (max-width:980px){
+      .hero{grid-template-columns:1fr;gap:18px}
+      .wrap{padding:18px}
+      .navlinks{display:none}
+    }
+    @media (max-width:520px){
+      .brand .name{display:none}
+    }
+
+    /* small smooth-scrolling & highlight */
+    html {scroll-behavior: smooth;}
+    .active {color:var(--accent) !important;}
+    /* small animated underline for section titles */
+    .section-title::after{
+      content:"";display:block;height:3px;width:48px;border-radius:3px;background:linear-gradient(90deg,var(--accent),#38bdf8);margin-top:8px;
+      opacity:0.95;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <nav>
+      <a class="brand" href="#top" aria-label="Avadhoot Bhambare homepage">
+        <div class="avatar">AB</div>
+        <div>
+          <div style="font-weight:700">Avadhoot Bhambare</div>
+          <div style="font-size:12px;color:var(--muted)">Product · Solutions · Customer Advocate</div>
+        </div>
+      </a>
+
+      <div class="navlinks" id="navlinks">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="hero card" id="top">
+      <div class="intro">
+        <h1>Product / Solutions / Customer Advocate</h1>
+        <p class="lead">I’m a seasoned business leader with deep expertise in building and scaling customer-centric fintech platforms across payments, lending, and enterprise finance. While my foundation lies in engineering, I’ve spent the last several years leading product teams, launching complex fintech solutions, and driving revenue impact for B2B, Enterprise, and SMB customers.</p>
+
+        <div class="meta">
+          <div class="chip">Fintech • Payments • Lending</div>
+          <div class="chip">Product Strategy • GTM • Customer Ops</div>
+          <div class="chip">Engineering background</div>
+        </div>
+
+        <div class="cta-row">
+          <a class="btn" href="#contact">Contact</a>
+          <a class="btn secondary" href="#portfolio">View Portfolio</a>
+        </div>
+      </div>
+
+      <aside>
+        <div class="card" style="display:flex;flex-direction:column;gap:10px">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <strong>Quick Facts</strong>
+            <span style="color:var(--muted);font-size:13px">Open to opportunities</span>
+          </div>
+
+          <div style="display:flex;flex-direction:column;gap:8px;margin-top:8px">
+            <div style="font-weight:700">Location</div>
+            <div style="color:var(--muted)">San Francisco Bay Area / Remote</div>
+
+            <div style="font-weight:700;margin-top:6px">Contact</div>
+            <div style="color:var(--muted)">avadhootbhambare@gmail.com • <a href="https://www.linkedin.com/in/avadhootbhambare" target="_blank" rel="noopener" style="color:var(--accent)">LinkedIn</a></div>
+          </div>
+        </div>
+      </aside>
+    </header>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="section-title"><h2>About</h2></div>
+      <div class="card">
+        <p style="color:var(--muted);margin:0">I bring product leadership, technical fluency, and customer empathy together to design and scale fintech products. My work focuses on payments orchestration, lending platforms, and monetization strategies for enterprise and SMB customers. I partner closely with engineering, sales, and compliance to deliver measurable business outcomes.</p>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience">
+      <div class="section-title"><h2>Experience</h2></div>
+      <div class="grid-2">
+        <div class="exp-item card">
+          <h3>Senior Product Leader — (Example Company)</h3>
+          <p>Led payments & integrations product, built merchant onboarding flows and payment orchestration that grew transaction volume by X% (replace with your real metrics).</p>
+        </div>
+        <div class="exp-item card">
+          <h3>Head of Solutions — (Example Company)</h3>
+          <p>Built enterprise fintech integrations, managed cross-functional teams, and drove multi-million dollar deals with strategic customers.</p>
+        </div>
+      </div>
+      <div style="margin-top:12px;color:var(--muted);font-size:13px">Tip: replace example roles with your real roles + 2–3 bullet achievement lines each.</div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+      <div class="section-title"><h2>Skills</h2></div>
+      <div class="card">
+        <div class="skills">
+          <div class="skill">Payments Architecture</div>
+          <div class="skill">Product Strategy</div>
+          <div class="skill">API Design & Integrations</div>
+          <div class="skill">Lending Platforms</div>
+          <div class="skill">B2B & Enterprise Sales</div>
+          <div class="skill">Go-to-Market</div>
+          <div class="skill">Data-driven Roadmaps</div>
+          <div class="skill">Cross-functional Leadership</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <div class="section-title"><h2>Projects / Case Studies</h2></div>
+      <div class="grid-2">
+        <div class="project card">
+          <h4>Payments Orchestration Platform</h4>
+          <p>Led design and launch of an orchestration layer to route payments across multiple processors — improved authorization rates and reduced costs.</p>
+        </div>
+        <div class="project card">
+          <h4>Embedded Lending Solution</h4>
+          <p>Built an embedded lending product with underwriting and modular integration for partners — accelerated partner conversions.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PORTFOLIO (Google Slides) -->
+    <section id="portfolio">
+      <div class="section-title"><h2>Portfolio</h2></div>
+      <div class="card">
+        <div class="slides-wrap" aria-label="Google Slides portfolio">
+          <!-- Embedded Google Slides iframe (your provided iframe) -->
+          <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQ4YMNtpI2dYWhrGePoKb84eeqwg3cn1ahSCgI4g6cPDacrgEbEGeMoi1TIEG0D8P_O4-lBt84rCs6v/pubembed?start=true&loop=true&delayms=3000" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+        </div>
+      </div>
+      <div style="margin-top:10px;color:var(--muted);font-size:13px">Tip: update your Slides and the embedded view will reflect changes automatically (when you re-publish from Google Slides if needed).</div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="section-title"><h2>Contact</h2></div>
+      <div class="card contact-grid">
+        <div class="contact-card">
+          <strong>Email</strong>
+          <div style="margin-top:8px"><a href="mailto:avadhoot@example.com">avadhoot@example.com</a></div>
+        </div>
+
+        <div class="contact-card">
+          <strong>LinkedIn</strong>
+          <div style="margin-top:8px"><a href="https://www.linkedin.com/in/avadhootbhambare" target="_blank" rel="noopener">linkedin.com/in/avadhootbhambare</a></div>
+        </div>
+
+        <div class="contact-card">
+          <strong>Download resume</strong>
+          <div style="margin-top:8px"><a href="#" onclick="alert('Attach a direct resume PDF and replace this link.');return false">PDF version (add file)</a></div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div>© <span id="year"></span> Avadhoot Bhambare · Built with HTML • Hosted on GitHub Pages</div>
+    </footer>
+  </div>
+
+  <script>
+    // set year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // simple section active link highlight
+    const links = document.querySelectorAll('.navlinks a');
+    const sections = [...links].map(l => document.querySelector(l.getAttribute('href')));
+
+    function onScroll(){
+      const scrollPos = window.scrollY + 120;
+      sections.forEach((sec, idx) => {
+        if(!sec) return;
+        const top = sec.offsetTop;
+        const bottom = top + sec.offsetHeight;
+        if(scrollPos >= top && scrollPos < bottom){
+          links.forEach(a=>a.classList.remove('active'));
+          links[idx].classList.add('active');
+        }
+      });
+    }
+    window.addEventListener('scroll', onScroll);
+    onScroll();
+
+    // Mobile nav toggle (simple)
+    // If you want a hamburger, implement later; nav hides on small screens to keep layout minimal.
+  </script>
+</body>
+</html>
